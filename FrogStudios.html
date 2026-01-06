@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FrogStudios</title>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at center, #1aff6a, #0b5d2a, #000);
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* HEADER - back to original left-aligned style */
+header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    background: rgba(0,0,0,0.45);
+    border-bottom: 2px solid #2bff68;
+}
+
+header img { height: 55px; }
+header h1 { margin: 0; font-size: 28px; font-weight: 900; color: #9bff9b; }
+
+/* TABS on the LEFT again */
+nav {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+}
+
+.tab-btn {
+    padding: 10px 18px;
+    border: 2px solid #2bff68;
+    background: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+.tab-btn:hover { background: #0b5d2a; }
+.tab-btn.active { background: #1c8f40; }
+
+/* PANELS */
+.panel {
+    display: none;
+    height: calc(100vh - 90px);
+    overflow: hidden;
+    padding: 22px;
+}
+.panel.active { display: block; }
+
+/* CARDS */
+.card {
+    background: rgba(0,0,0,0.6);
+    border: 1px solid #2bff68;
+    padding: 16px;
+    border-radius: 10px;
+    margin-bottom: 14px;
+}
+
+/* IFRAMES */
+#iframeContainer {
+    width: 100%;
+    height: calc(100% - 150px);
+    border: none;
+    border-radius: 10px;
+    background: black;
+    margin-top: 10px;
+}
+
+/* FULLSCREEN BUTTON inside Play tab only */
+#fsButton {
+    padding: 10px 20px;
+    background: black;
+    border: 2px solid #2bff68;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+#fsButton:hover { background: #1c8f40; }
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="frog.png" alt="Frog">
+    <h1>FrogStudios</h1>
+    <nav>
+        <button class="tab-btn active" data-tab="home">Home</button>
+        <button class="tab-btn" data-tab="links">Links</button>
+        <button class="tab-btn" data-tab="play">Play</button>
+    </nav>
+</header>
+
+<!-- HOME TAB -->
+<div class="panel active" id="home">
+    <div class="card">
+        <h2>Welcome to FrogStudios</h2>
+        <p>We provide proxy links, games, and tools.</p>
+        <p>last updated 12/12/25</p>
+        <p><small>Previously known as SheepStudios</small></p>
+    </div>
+</div>
+
+<!-- LINKS TAB -->
+<div class="panel" id="links">
+    <div class="card">
+        <h2>incognitos</h2>
+        <a href="https://kiza-network.w3spaces.com/" target="_blank">kiza-network.w3spaces.com</a><br>
+        <a href="https://proxynet.w3spaces.com/" target="_blank">proxynet.w3spaces.com</a><br>
+        <a href="https://searches.w3spaces.com/" target="_blank">searches.w3spaces.com</a>
+    </div>
+
+    <div class="card">
+        <h2>Games / Proxies</h2>
+        <a href="https://dash.artweb.website.cdn.cloudflare.net/" target="_blank">DaydreamX</a><br>
+        <a href="https://buy.artweb.website.cdn.cloudflare.net/" target="_blank">Space</a><br>
+        <a href="http://Creativefish.org" target="_blank">Fern</a><br>
+        <a href="https://media.kpcompass.com/embeds/c56b1f1e15fe667c724ca6c9c21bdd904b8ccc478395e126f140c4f1e2eedb63.html" target="_blank">minecraft/eagletek</a><br>
+        <a href="https://refinedstuffs2.azurewebsites.net/#player" target="_blank">refind</a><br>
+        <a
+href="https://mathhub.de.com" target="_blank">1000+games</a><br> 
+        <a href="http://Bottomofthe9th.org/index.html" target="_blank">1000+games2</a><br>
+        <a href="http://bausatz.freude-macherei.ch/59248bc5fd6cdf01" target="_blank">z-kit</a><br><br>
+
+        <strong>Frogie’s Arcade</strong> (Username: user_4502c1 | Password: 3d082116)<br>
+        <a href="https://pqt8aodj.frogseducation.life/" target="_blank">frogseducation.life</a><br>
+        <a href="https://r1hmxxls.boydingles.cfd/" target="_blank">boydingles.cfd</a><br>
+        <a 
+href="https://frogs.look.good.pxi-fusion.com.cdn.cloudflare.net/math/" target="_blank">Frogs.look.good</a><br>
+        <a href="https://wpjj8hpk.betterthancbmagic.life/" target="_blank">betterthancbmagic.life</a><br>
+        <a href="https://pm6regye.frogsareamazing.shop/" target="_blank">frogsareamazing.shop</a><br><br>
+        <a
+href="https://www.google.com/search?q=frogs&rlz=1CASLSU_enUS1116US1116&oq=frogs&gs_lcrp=EgZjaHJvbWUqBwgAEAAYjwIyBwgAEAAYjwIyBggBEEUYPDIGCAIQRRg8Mg0IAxAuGIMBGLEDGIAEMgcIBBAAGIAEMg8IBRAuGAoYrwEYxwEYgAQyCggGEC4YsQMYgAQyBggHEEUYPNIBBzY2OGowajSoAgGwAgHxBV2U5IC7G1X-8QVdlOSAuxtV_g&sourceid=chrome&ie=UTF-8" target="_blank">FrogGoonMaterial</a><br>
+    </div>
+
+    <div class="card"><h3>MORE SOON!</h3></div>
+</div>
+
+<!-- PLAY TAB -->
+<div class="panel" id="play">
+    <div class="card">
+        <h2>Load Your Own HTML Game</h2>
+        <input id="fileInput" type="file" accept=".html">
+        <button id="launchBtn">Launch</button>
+        <button id="clearBtn">Clear</button>
+        <p id="status">No file loaded.</p>
+        
+        <!-- Fullscreen button only in Play tab -->
+        <button id="fsButton">Fullscreen WeedStudios</button>
+    </div>
+
+    <!-- Your custom local game iframe -->
+    <iframe id="frame" style="display:none; width:100%; height:70vh; border:none; border-radius:10px;"></iframe>
+
+    <!-- Main game list (stop.html) -->
+    <iframe src="stop.html" id="iframeContainer"></iframe>
+</div>
+
+<script>
+// TAB SWITCHING
+const tabs = document.querySelectorAll('.tab-btn');
+const panels = document.querySelectorAll('.panel');
+
+tabs.forEach(btn => {
+    btn.onclick = () => {
+        tabs.forEach(b => b.classList.remove('active'));
+        panels.forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.tab).classList.add('active');
+    };
+});
+
+// Load Your Own Game
+const frame = document.getElementById('frame');
+const fileInput = document.getElementById('fileInput');
+const statusText = document.getElementById('status');
+
+launchBtn.onclick = () => {
+    const file = fileInput.files[0];
+    if (!file) {
+        statusText.textContent = 'No file selected.';
+        return;
+    }
+    const reader = new FileReader();
+    reader.onload = e => {
+        frame.srcdoc = e.target.result;
+        frame.style.display = 'block';
+        statusText.textContent = 'Loaded: ' + file.name;
+    };
+    reader.readAsText(file);
+};
+
+clearBtn.onclick = () => {
+    frame.srcdoc = '';
+    frame.style.display = 'none';
+    statusText.textContent = 'Cleared.';
+};
+
+// FULLSCREEN BUTTON - only works when Play tab is active
+document.getElementById('fsButton').onclick = () => {
+    const iframe = document.getElementById('iframeContainer');
+    if (iframe.requestFullscreen) {
+        iframe.requestFullscreen();
+    } else if (iframe.webkitRequestFullscreen) {
+        iframe.webkitRequestFullscreen();
+    } else if (iframe.msRequestFullscreen) {
+        iframe.msRequestFullscreen();
+    }
+};
+</script>
+
+</body>
+</html>
